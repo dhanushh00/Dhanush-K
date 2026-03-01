@@ -9,28 +9,24 @@ type SkillGroup = {
 
 const skillGroups: SkillGroup[] = [
     {
-        label: "Languages",
-        skills: ["Python", "C", "C++", "Java"],
-    },
-    {
-        label: "Web Development",
-        skills: ["HTML", "CSS", "JavaScript", "React", "Next.js"],
-    },
-    {
         label: "AI / ML",
-        skills: ["Machine Learning", "NLP", "Transformers", "Hugging Face", "Generative AI"],
+        skills: ["Machine Learning", "NLP", "Transformers", "Hugging Face", "Generative AI", "Scikit-learn"],
     },
     {
-        label: "Tools & Technologies",
-        skills: ["Git", "GitHub", "Docker", "AWS", "Streamlit"],
+        label: "Web",
+        skills: ["HTML", "CSS", "JavaScript", "TypeScript", "React", "Next.js", "Node.js", "Express.js"],
     },
     {
         label: "Databases",
-        skills: ["MongoDB", "MySQL"],
+        skills: ["MongoDB", "MySQL", "PostgreSQL", "Oracle SQL", "Redis"],
     },
     {
-        label: "Other",
-        skills: ["DevOps Basics", "API Development", "Cloud Deployment"],
+        label: "Tools",
+        skills: ["Git", "GitHub", "Docker", "AWS", "Postman", "Streamlit", "Drizzle ORM"],
+    },
+    {
+        label: "Backend",
+        skills: ["REST APIs"],
     },
 ];
 
