@@ -41,7 +41,7 @@ function Label({ children }: { children: React.ReactNode }) {
 
 export function Experience() {
     return (
-        <section id="experience" className="px-8 md:px-16 lg:px-24 py-20 max-w-4xl space-y-14">
+        <section id="experience" className="px-8 md:px-16 lg:px-24 pt-20 pb-10 max-w-4xl space-y-14">
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
