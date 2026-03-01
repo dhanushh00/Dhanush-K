@@ -9,8 +9,8 @@ type SkillGroup = {
 
 const skillGroups: SkillGroup[] = [
     {
-        label: "AI / ML",
-        skills: ["Machine Learning", "NLP", "Transformers", "Hugging Face", "Generative AI", "Scikit-learn"],
+        label: "Languages",
+        skills: ["Python", "C", "C++", "Java", "Go"],
     },
     {
         label: "Web",
@@ -18,11 +18,15 @@ const skillGroups: SkillGroup[] = [
     },
     {
         label: "Databases",
-        skills: ["MongoDB", "MySQL", "PostgreSQL", "Oracle SQL", "Redis"],
+        skills: ["MongoDB", "PostgreSQL", "Redis"],
+    },
+    {
+        label: "AI / ML",
+        skills: ["Machine Learning", "NLP", "Transformers", "Hugging Face", "Generative AI", "Scikit-learn"],
     },
     {
         label: "Tools",
-        skills: ["Git", "GitHub", "Docker", "AWS", "Postman", "Streamlit", "Drizzle ORM"],
+        skills: ["Git", "GitHub", "Docker", "AWS", "Azure", "Postman", "Streamlit", "Drizzle ORM"],
     },
     {
         label: "Backend",
@@ -32,34 +36,39 @@ const skillGroups: SkillGroup[] = [
 
 export function Skills() {
     return (
-        <section id="skills" className="px-8 md:px-16 lg:px-24 py-20 max-w-4xl">
+        <section id="skills" className="px-8 md:px-16 lg:px-24 pt-12 pb-20">
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5 }}
+                className="max-w-3xl"
             >
-                <h2 className="text-sm font-semibold text-foreground uppercase tracking-widest mb-12">
+                <h2 className="text-sm font-semibold text-foreground uppercase tracking-widest mb-6">
                     Skills
                 </h2>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-16 gap-y-10">
+                <div className="flex flex-col border-t border-border/40">
                     {skillGroups.map((group, i) => (
                         <motion.div
                             key={group.label}
-                            initial={{ opacity: 0, y: 12 }}
+                            initial={{ opacity: 0, y: 10 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            transition={{ duration: 0.35, delay: i * 0.06 }}
+                            transition={{ duration: 0.3, delay: i * 0.05 }}
+                            className="grid grid-cols-[140px_1fr] gap-x-8 py-7 border-b border-border/40 items-start"
                         >
-                            <p className="text-xs text-muted-foreground uppercase tracking-widest mb-3">
+                            {/* Label — subtle and tracking-widest */}
+                            <span className="text-[10px] text-muted-foreground/50 uppercase tracking-[0.25em] pt-2 shrink-0">
                                 {group.label}
-                            </p>
-                            <div className="flex flex-wrap gap-2">
+                            </span>
+
+                            {/* Skills chips */}
+                            <div className="flex flex-wrap gap-2.5">
                                 {group.skills.map((skill) => (
                                     <span
                                         key={skill}
-                                        className="px-3 py-1.5 text-sm border border-border rounded-full text-foreground/80 hover:bg-accent hover:text-foreground transition-colors cursor-default"
+                                        className="px-3 py-1.5 text-sm rounded-full transition-all duration-300 cursor-default border border-border text-foreground/70 hover:border-foreground/40 hover:text-foreground"
                                     >
                                         {skill}
                                     </span>
