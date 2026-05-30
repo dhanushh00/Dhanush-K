@@ -7,9 +7,12 @@ export function Footer() {
     return (
         <footer className="w-full border-t border-border bg-background py-8">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4">
-                <p className="text-sm text-muted-foreground">
-                    © {currentYear} Dhanush K. All rights reserved.
-                </p>
+                <div className="flex flex-col items-center md:items-start gap-1">
+                    <p className="text-sm text-muted-foreground">
+                        © {currentYear} Dhanush K. All rights reserved.
+                    </p>
+                    <p className="text-xs text-muted-foreground/70">Last updated: May 2026</p>
+                </div>
 
                 <div className="flex items-center space-x-6">
                     <Link
@@ -20,7 +23,7 @@ export function Footer() {
                         <Mail className="h-5 w-5" />
                     </Link>
                     <Link
-                        href="https://github.com"
+                        href="https://github.com/dhanushkg23"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-muted-foreground hover:text-primary transition-colors"
@@ -29,7 +32,7 @@ export function Footer() {
                         <Github className="h-5 w-5" />
                     </Link>
                     <Link
-                        href="https://linkedin.com"
+                        href="https://www.linkedin.com/in/dhanush-k-127099310/"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-muted-foreground hover:text-primary transition-colors"

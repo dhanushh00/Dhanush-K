@@ -7,7 +7,7 @@ const currentlyLearning = ["LangChain", "PyTorch", "Advanced Generative AI"];
 
 export function About() {
     return (
-        <section id="about" className="px-8 md:px-16 lg:px-24 py-20 max-w-4xl">
+        <section id="about" className="px-5 sm:px-8 md:px-16 lg:px-24 py-16 sm:py-20 max-w-4xl mx-auto w-full">
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -20,22 +20,16 @@ export function About() {
 
                 <div className="space-y-4 text-base leading-relaxed text-foreground/80">
                     <p>
-                        I am a pre-final year Computer Science student at{" "}
+                        I am a final-year Computer Science student at{" "}
                         <span className="text-foreground font-medium">VIT, Chennai</span>,
-                        with a strong interest in Artificial Intelligence and full-stack
-                        development. I enjoy building real-world applications that combine
-                        machine learning with practical user interfaces.
+                        focused on building blockchain systems, full-stack applications, and
+                        practical AI/ML projects. I enjoy shipping end-to-end products — from
+                        smart contracts and backend services to polished UIs.
                     </p>
                     <p>
-                        My work focuses on solving meaningful problems — from{" "}
-                        <span className="text-foreground font-medium">
-                            legal sentiment analysis
-                        </span>{" "}
-                        using Generative AI to{" "}
-                        <span className="text-foreground font-medium">
-                            assistive navigation systems
-                        </span>{" "}
-                        for visually impaired users.
+                        Recently, I’ve worked on decentralised lending protocols, multimodal
+                        deepfake detection, and neuro-symbolic optimisation tools — combining
+                        reasoning with data-driven models.
                     </p>
                     <p>
                         I am currently exploring{" "}

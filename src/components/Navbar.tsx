@@ -30,7 +30,7 @@ export function Navbar() {
         >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center h-16">
-                    <div className="flex-shrink-0 flex items-center">
+                    <div className="shrink-0 flex items-center">
                         <Link href="#" className="text-xl font-bold tracking-tighter">
                             DK<span className="text-primary">.</span>
                         </Link>
@@ -47,6 +47,13 @@ export function Navbar() {
                                 {link.name}
                             </a>
                         ))}
+                        <a
+                            href="/resume.pdf"
+                            download
+                            className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors"
+                        >
+                            Resume
+                        </a>
                         <div className="flex items-center">
                             <span className="w-px h-6 bg-border mx-4"></span>
                             <ThemeToggle />
@@ -81,6 +88,14 @@ export function Navbar() {
                                 {link.name}
                             </a>
                         ))}
+                        <a
+                            href="/resume.pdf"
+                            download
+                            onClick={() => setIsOpen(false)}
+                            className="block px-3 py-2 rounded-md text-base font-medium text-foreground/80 hover:text-primary hover:bg-accent transition-colors"
+                        >
+                            Resume
+                        </a>
                     </div>
                 </div>
             )}

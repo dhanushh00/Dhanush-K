@@ -4,12 +4,13 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Sidebar } from "@/components/Sidebar";
 import { RightBackgroundGlow } from "@/components/RightBackgroundGlow";
+import { StarfieldBackground } from "@/components/StarfieldBackground";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Dhanush K | Portfolio",
-  description: "Portfolio of Dhanush K — CSE student at VIT Chennai specialising in AI/ML and full-stack development.",
+  description: "Portfolio of Dhanush K — final-year CSE student at VIT Chennai specialising in Blockchain development and full-stack engineering.",
 };
 
 export default function RootLayout({
@@ -22,10 +23,11 @@ export default function RootLayout({
       <body className={`${inter.className} antialiased`}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
           <div className="min-h-screen flex flex-col md:flex-row bg-background text-foreground relative overflow-hidden">
+            <StarfieldBackground />
             <RightBackgroundGlow />
             <Sidebar />
             <main className="flex-1 md:ml-60 w-full overflow-x-hidden relative z-10">
-              <div className="max-w-6xl mx-auto w-full">
+              <div className="max-w-7xl mx-auto w-full">
                 {children}
               </div>
             </main>

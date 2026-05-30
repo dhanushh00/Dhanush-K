@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export function HomeCTA() {
     return (
-        <section className="px-8 md:px-16 lg:px-24 py-20">
+        <section className="px-5 sm:px-8 md:px-16 lg:px-24 py-16 sm:py-20">
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -13,10 +13,10 @@ export function HomeCTA() {
                 className="flex flex-col gap-6 items-start"
             >
                 <p className="text-2xl md:text-3xl font-semibold text-foreground leading-snug max-w-lg">
-                    Let's build something impactful.
+                    Let’s build something impactful.
                 </p>
                 <p className="text-base text-muted-foreground max-w-md leading-relaxed">
-                    Open to internships, freelance projects, and collaborations. If you have an idea, let's talk.
+                    Open to internships, freelance projects, and collaborations. If you have an idea, let’s talk.
                 </p>
                 <a
                     href="#contact"

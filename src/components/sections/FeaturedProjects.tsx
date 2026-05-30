@@ -5,29 +5,30 @@ import { Github, ExternalLink } from "lucide-react";
 
 const featured = [
     {
-        title: "AI Resume Analyzer",
-        description: "ML-powered resume screening that detects skill gaps and provides personalised improvement suggestions.",
-        tech: ["Node.js", "MongoDB", "Machine Learning", "Docker", "AWS"],
-        github: "https://github.com/dhanushh00",
+        title: "ChainFund — Decentralised Community Lending Protocol",
+        description: "Smart-contract chit fund with sealed-bid auctions, on-chain repayment tracking, and an AI-powered credit scoring oracle.",
+        tech: ["Solidity", "Foundry", "React", "Node.js", "Ethers.js"],
+        github: "https://github.com/dhanushkg23",
         live: null,
     },
     {
-        title: "AI Legal Sentiment Analyzer",
-        description: "Real-time sentiment analysis on legal documents using FLAN-T5 — automating insight extraction from complex text.",
-        tech: ["Python", "FLAN-T5", "Hugging Face", "Streamlit", "AWS"],
-        github: "https://github.com/dhanushh00",
+        title: "Multimodal Deepfake Detection System",
+        description: "Two-branch detector combining lip-sync inconsistency and temporal artifact signals, with explainable outputs.",
+        tech: ["Python", "PyTorch", "OpenCV", "Scikit-learn", "SyncNet"],
+        github: "https://github.com/dhanushkg23",
         live: null,
     },
 ];
 
 export function FeaturedProjects() {
     return (
-        <section className="px-8 md:px-16 lg:px-24 py-16">
+        <section className="px-5 sm:px-8 md:px-16 lg:px-24 py-12 sm:py-16">
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: false }}
                 transition={{ duration: 0.5 }}
+                className="max-w-6xl mx-auto"
             >
                 <div className="flex items-center justify-between mb-10">
                     <p className="text-xs text-muted-foreground uppercase tracking-widest">Featured Projects</p>

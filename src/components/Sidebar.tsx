@@ -15,7 +15,7 @@ const navItems = [
 ];
 
 const SOCIAL = {
-    github: "https://github.com/dhanushh00",
+    github: "https://github.com/dhanushkg23",
     linkedin: "https://www.linkedin.com/in/dhanush-k-127099310/",
     x: "https://x.com/DhanushK1271650",
 };
@@ -68,7 +68,7 @@ export function Sidebar() {
                     DK
                 </div>
                 <h1 className="text-sm font-semibold leading-tight">Dhanush K</h1>
-                <p className="text-xs text-muted-foreground mt-0.5">AI/ML Dev · Full Stack</p>
+                <p className="text-xs text-muted-foreground mt-0.5">Blockchain Dev · Full Stack</p>
             </div>
 
             {/* Nav */}

@@ -15,35 +15,35 @@ type Project = {
 
 const projects: Project[] = [
     {
-        title: "AI Resume Analyzer",
+        title: "ChainFund — Decentralised Community Lending Protocol",
         description:
-            "Full-stack web app that uses ML models to analyze resumes against job descriptions. Provides skill-gap detection and personalized suggestions to improve candidate screening efficiency.",
-        tech: ["Node.js", "MongoDB", "Machine Learning", "Docker", "AWS"],
+            "Smart-contract chit fund where members deposit periodically and bid via sealed-bid auctions to receive the pool, with on-chain repayment tracking and an AI-powered credit scoring oracle.",
+        tech: ["Solidity", "Foundry", "React", "Node.js", "Ethers.js", "Gemini API"],
         github: "https://github.com/dhanushkg23",
         live: null,
-        category: "Full Stack",
+        category: "Blockchain",
     },
     {
-        title: "AI Legal Sentiment Analyzer",
+        title: "Multimodal Deepfake Detection System",
         description:
-            "Sentiment analysis tool built with FLAN-T5 and Hugging Face that performs real-time analysis on legal documents, automating insight extraction from complex legal text.",
-        tech: ["Python", "FLAN-T5", "Hugging Face", "Streamlit", "AWS"],
+            "Two-branch deepfake detector combining lip-sync inconsistency analysis and temporal artifact detection, with explainable outputs for human-readable reasoning.",
+        tech: ["Python", "PyTorch", "OpenCV", "Scikit-learn", "SyncNet"],
         github: "https://github.com/dhanushkg23",
         live: null,
         category: "AI/ML",
     },
     {
-        title: "Smart Path for Visually Impaired",
+        title: "Neuro-Symbolic Tax Optimisation Engine",
         description:
-            "Navigation system with real-time voice guidance and location tracking to help visually impaired users navigate independently. Focused on accessibility and real-world usability.",
-        tech: ["React", "Geolocation API", "WebSockets", "Node.js"],
+            "Hybrid reasoning system combining symbolic tax rules with ML-driven heuristics to generate personalised tax optimisation recommendations in an interactive web app.",
+        tech: ["Python", "Streamlit", "Scikit-learn", "Pandas", "NumPy"],
         github: "https://github.com/dhanushkg23",
         live: null,
-        category: "Full Stack",
+        category: "AI/ML",
     },
 ];
 
-const categories = ["All", "AI/ML", "Full Stack"];
+const categories = ["All", "Blockchain", "AI/ML"];
 
 export function Projects() {
     const [active, setActive] = useState("All");
@@ -51,7 +51,7 @@ export function Projects() {
         active === "All" ? projects : projects.filter((p) => p.category === active);
 
     return (
-        <section id="projects" className="px-8 md:px-16 lg:px-24 py-20 max-w-5xl">
+        <section id="projects" className="px-5 sm:px-8 md:px-16 lg:px-24 py-16 sm:py-20 max-w-5xl mx-auto w-full">
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -88,7 +88,7 @@ export function Projects() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.35, delay: i * 0.07 }}
-                            className="group p-6 -mx-6 rounded-2xl hover:bg-accent/40 transition-colors"
+                            className="group p-5 sm:p-6 -mx-5 sm:-mx-6 rounded-2xl hover:bg-accent/40 transition-colors"
                         >
                             {/* Header row */}
                             <div className="flex items-start justify-between gap-4 mb-3">
@@ -124,11 +124,11 @@ export function Projects() {
                                 </div>
                             </div>
 
-                            <p className="text-sm text-muted-foreground leading-relaxed mb-4 ml-6">
+                            <p className="text-sm text-muted-foreground leading-relaxed mb-4 ml-0 sm:ml-6">
                                 {project.description}
                             </p>
 
-                            <div className="flex flex-wrap gap-2 ml-6">
+                            <div className="flex flex-wrap gap-2 ml-0 sm:ml-6">
                                 {project.tech.map((t) => (
                                     <span
                                         key={t}
