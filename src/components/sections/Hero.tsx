@@ -32,7 +32,7 @@ export function Hero() {
                 variants={container}
                 initial="hidden"
                 animate="visible"
-                className="max-w-3xl w-full mx-auto flex flex-col gap-14"
+                className="max-w-3xl w-full flex flex-col gap-14"
             >
                 {/* Identity block */}
                 <div className="flex flex-col gap-5">

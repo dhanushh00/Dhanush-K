@@ -28,7 +28,6 @@ export function FeaturedProjects() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: false }}
                 transition={{ duration: 0.5 }}
-                className="max-w-6xl mx-auto"
             >
                 <div className="flex items-center justify-between mb-10">
                     <p className="text-xs text-muted-foreground uppercase tracking-widest">Featured Projects</p>

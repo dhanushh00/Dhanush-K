@@ -27,7 +27,7 @@ export default function RootLayout({
             <RightBackgroundGlow />
             <Sidebar />
             <main className="flex-1 md:ml-60 w-full overflow-x-hidden relative z-10">
-              <div className="max-w-7xl mx-auto w-full">
+              <div className="max-w-6xl mx-auto w-full">
                 {children}
               </div>
             </main>

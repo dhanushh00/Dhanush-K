@@ -7,7 +7,7 @@ const currentlyLearning = ["LangChain", "PyTorch", "Advanced Generative AI"];
 
 export function About() {
     return (
-        <section id="about" className="px-5 sm:px-8 md:px-16 lg:px-24 py-16 sm:py-20 max-w-4xl mx-auto w-full">
+        <section id="about" className="px-5 sm:px-8 md:px-16 lg:px-24 py-16 sm:py-20 max-w-4xl">
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}

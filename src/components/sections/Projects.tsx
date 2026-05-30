@@ -51,7 +51,7 @@ export function Projects() {
         active === "All" ? projects : projects.filter((p) => p.category === active);
 
     return (
-        <section id="projects" className="px-5 sm:px-8 md:px-16 lg:px-24 py-16 sm:py-20 max-w-5xl mx-auto w-full">
+        <section id="projects" className="px-5 sm:px-8 md:px-16 lg:px-24 py-16 sm:py-20 max-w-5xl">
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
