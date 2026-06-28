@@ -24,10 +24,10 @@ const projects: Project[] = [
         category: "Blockchain",
     },
     {
-        title: "Multimodal Deepfake Detection System",
+        title: "Sentinel – Agentic Financial Intelligence Platform",
         description:
-            "Two-branch deepfake detector combining lip-sync inconsistency analysis and temporal artifact detection, with explainable outputs for human-readable reasoning.",
-        tech: ["Python", "PyTorch", "OpenCV", "Scikit-learn", "SyncNet"],
+            "Multi-agent AI system using LangGraph orchestrating 5 specialised agents for news, sentiment, technical analysis, and risk to deliver explainable investment insights.",
+        tech: ["Python", "FastAPI", "LangGraph", "Next.js", "TypeScript", "PostgreSQL"],
         github: "https://github.com/dhanushkg23",
         live: null,
         category: "AI/ML",

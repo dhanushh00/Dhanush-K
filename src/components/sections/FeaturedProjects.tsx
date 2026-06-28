@@ -12,9 +12,9 @@ const featured = [
         live: null,
     },
     {
-        title: "Multimodal Deepfake Detection System",
-        description: "Two-branch detector combining lip-sync inconsistency and temporal artifact signals, with explainable outputs.",
-        tech: ["Python", "PyTorch", "OpenCV", "Scikit-learn", "SyncNet"],
+        title: "Sentinel – Agentic Financial Intelligence Platform",
+        description: "Multi-agent AI system orchestrating specialised agents to deliver explainable investment insights using LangGraph and FinBERT.",
+        tech: ["Python", "FastAPI", "LangGraph", "Next.js", "PostgreSQL"],
         github: "https://github.com/dhanushkg23",
         live: null,
     },

@@ -32,38 +32,53 @@ export function Hero() {
                 variants={container}
                 initial="hidden"
                 animate="visible"
-                className="max-w-3xl w-full flex flex-col gap-14"
+                className="max-w-5xl w-full flex flex-col gap-14"
             >
                 {/* Identity block */}
-                <div className="flex flex-col gap-5">
-                    <motion.p variants={fadeUp} className="text-xs text-muted-foreground tracking-[0.2em] uppercase font-medium">
-                        Hello, I’m
-                    </motion.p>
-                    <motion.h1 variants={fadeUp} className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-none tracking-tight text-transparent bg-clip-text bg-linear-to-br from-foreground via-foreground/90 to-muted-foreground/50">
-                        Dhanush K
-                    </motion.h1>
-                    <motion.p variants={fadeUp} className="text-xl md:text-2xl text-foreground/80 font-light tracking-wide">
-                        Blockchain Developer &nbsp;·&nbsp; Full Stack Developer
-                    </motion.p>
-                    <motion.p variants={fadeUp} className="text-base text-muted-foreground leading-relaxed max-w-xl">
-                        I design and build decentralised systems — writing smart contracts on Ethereum and shipping full-stack applications that bridge Web3 with great user experiences.
-                    </motion.p>
+                <div className="flex flex-col md:flex-row gap-10 md:gap-12 items-center justify-between">
+                    {/* Image */}
+                    <motion.div variants={fadeUp} className="shrink-0 relative group">
+                        <div className="relative w-48 h-64 sm:w-56 sm:h-72 md:w-64 md:h-80 rounded-[2.5rem] overflow-hidden border border-border/30 bg-background shadow-xl">
+                            {/* The Image */}
+                            <img 
+                                src="/profile.jpg" 
+                                alt="Dhanush K" 
+                                className="relative w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+                            />
+                        </div>
+                    </motion.div>
+                    
+                    {/* Text Content */}
+                    <motion.div variants={fadeUp} className="flex flex-col gap-5 flex-1 text-center md:text-left relative z-10">
+                        <p className="text-xs text-muted-foreground tracking-[0.2em] uppercase font-medium">
+                            Hello, I’m
+                        </p>
+                        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[5rem] font-extrabold leading-none tracking-tight text-transparent bg-clip-text bg-linear-to-br from-foreground via-foreground/90 to-muted-foreground/50">
+                            Dhanush K
+                        </h1>
+                        <p className="text-xl md:text-2xl text-foreground/80 font-light tracking-wide">
+                            Blockchain Developer &nbsp;·&nbsp; Full Stack Developer
+                        </p>
+                        <p className="text-base text-muted-foreground leading-relaxed max-w-xl mx-auto md:mx-0">
+                            I design and build decentralised systems — writing smart contracts on Ethereum and shipping full-stack applications that bridge Web3 with great user experiences.
+                        </p>
 
-                    <motion.div variants={fadeUp} className="flex gap-4 flex-wrap pt-1">
-                        <a href="#projects" className="px-6 py-2.5 rounded-full bg-foreground text-background text-sm font-medium hover:opacity-75 transition-opacity">
-                            View Projects
-                        </a>
-                        <a href="#contact" className="px-6 py-2.5 rounded-full border border-border text-sm font-medium hover:bg-accent transition-colors">
-                            Contact Me
-                        </a>
-                        <a
-                            href="/resume.pdf"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="px-6 py-2.5 rounded-full border border-border text-sm font-medium hover:bg-accent transition-colors"
-                        >
-                            Resume
-                        </a>
+                        <div className="flex gap-4 flex-wrap pt-1 justify-center md:justify-start">
+                            <a href="#projects" className="px-6 py-2.5 rounded-full bg-foreground text-background text-sm font-medium hover:opacity-75 transition-opacity">
+                                View Projects
+                            </a>
+                            <a href="#contact" className="px-6 py-2.5 rounded-full border border-border text-sm font-medium hover:bg-accent transition-colors">
+                                Contact Me
+                            </a>
+                            <a
+                                href="/resume.pdf"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="px-6 py-2.5 rounded-full border border-border text-sm font-medium hover:bg-accent transition-colors"
+                            >
+                                Resume
+                            </a>
+                        </div>
                     </motion.div>
                 </div>
 

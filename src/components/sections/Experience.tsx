@@ -31,7 +31,7 @@ const education = [
         degree: "B.Tech – Computer Science and Engineering (Core)",
         institution: "Vellore Institute of Technology, Chennai",
         period: "Aug 2023 – Jul 2027",
-        detail: "CGPA: 8.54",
+        detail: "CGPA: 8.63",
     },
     {
         degree: "Class XII",
@@ -50,7 +50,6 @@ const education = [
 const certifications = [
     "Introduction to Generative AI – IBM (2024)",
     "Fundamentals of DevOps – IBM (2024)",
-    "Generative AI – Oracle (2025)",
 ];
 
 function Label({ children }: { children: React.ReactNode }) {
