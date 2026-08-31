@@ -10,31 +10,35 @@ type SkillGroup = {
 const skillGroups: SkillGroup[] = [
     {
         label: "Languages",
-        skills: ["Python", "C", "C++", "Java", "JavaScript", "Go", "Solidity", "SQL"],
+        skills: ["Python", "Java", "Solidity", "SQL", "JavaScript", "TypeScript"],
+    },
+    {
+        label: "Cloud (AWS)",
+        skills: ["AWS EC2", "AWS Lambda", "Amazon S3", "AWS DynamoDB", "AWS RDS", "AWS Rekognition"],
+    },
+    {
+        label: "AI & Agents",
+        skills: ["Multi-Agent Systems", "LangGraph", "FinBERT", "Gemini API", "Generative AI", "PyTorch", "pandas-ta"],
     },
     {
         label: "Blockchain",
-        skills: ["Ethereum", "Smart Contracts", "Web3.js", "Ethers.js", "Hardhat", "Foundry", "ERC-20 / ERC-721"],
-    },
-    {
-        label: "Web",
-        skills: ["HTML", "CSS", "JavaScript", "TypeScript", "React", "Next.js", "Node.js", "Express.js", "Tailwind CSS"],
+        skills: ["Smart Contracts", "Solidity", "Inco TEE", "ERC-4626", "Base Sepolia", "Ethereum", "Web3.js"],
     },
     {
         label: "Databases",
-        skills: ["MongoDB", "PostgreSQL", "OracleSQL", "Prisma", "Redis", "Firebase"],
+        skills: ["MongoDB", "PostgreSQL", "OracleSQL"],
     },
     {
-        label: "AI / ML",
-        skills: ["Machine Learning", "NLP", "Transformers", "Hugging Face", "Generative AI", "Pandas", "NumPy", "Matplotlib", "Scikit-learn", "TensorFlow", "PyTorch"],
+        label: "Web & Backend",
+        skills: ["React", "Next.js", "Node.js", "FastAPI", "REST APIs", "Tailwind CSS"],
     },
     {
         label: "Tools",
-        skills: ["Git", "GitHub", "Docker", "Postman", "AWS", "Azure", "Streamlit", "Drizzle ORM"],
+        skills: ["Git", "GitHub", "VS Code", "Postman", "Foundry"],
     },
     {
-        label: "Backend",
-        skills: ["REST APIs", "GraphQL"],
+        label: "Soft Skills",
+        skills: ["Problem-Solving", "Teamwork", "Leadership", "Communication", "Time Management"],
     },
 ];
 

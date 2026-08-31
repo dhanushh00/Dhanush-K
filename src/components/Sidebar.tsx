@@ -15,9 +15,10 @@ const navItems = [
 ];
 
 const SOCIAL = {
-    github: "https://github.com/dhanushkg23",
+    github: "https://github.com/dhanushh00",
     linkedin: "https://www.linkedin.com/in/dhanush-k-127099310/",
     x: "https://x.com/DhanushK1271650",
+    leetcode: "https://leetcode.com/u/DHANUSH-07",
 };
 const RESUME_PATH = "/resume.pdf";
 
@@ -64,11 +65,15 @@ export function Sidebar() {
         <div className="flex flex-col h-full py-8 px-6 gap-6">
             {/* Identity */}
             <div>
-                <div className="w-14 h-14 rounded-full bg-accent border border-border mb-4 flex items-center justify-center text-lg font-bold text-foreground select-none">
-                    DK
+                <div className="w-14 h-14 rounded-full overflow-hidden border border-border mb-4 bg-accent select-none shrink-0 relative shadow-sm">
+                    <img
+                        src="/avatar.jpg"
+                        alt="Dhanush K"
+                        className="w-full h-full object-cover"
+                    />
                 </div>
                 <h1 className="text-sm font-semibold leading-tight">Dhanush K</h1>
-                <p className="text-xs text-muted-foreground mt-0.5">Blockchain Dev · Full Stack</p>
+                <p className="text-xs text-muted-foreground mt-0.5">AI · Blockchain · Full Stack</p>
             </div>
 
             {/* Nav */}
@@ -116,6 +121,12 @@ export function Sidebar() {
                                 <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 22.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
                             </svg>
                         </Link>
+                        <Link href={SOCIAL.leetcode} target="_blank" rel="noopener noreferrer"
+                            className="w-8 h-8 flex items-center justify-center rounded-md text-muted-foreground hover:text-foreground hover:bg-accent transition-colors" aria-label="LeetCode">
+                            <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.26 5.26 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.246 2.152 5.652 2.164 7.91.034l3.704-3.527a1.378 1.378 0 0 0 .023-1.95 1.378 1.378 0 0 0-1.95-.024l-3.705 3.528a2.911 2.911 0 0 1-4.088-.016l-4.246-4.164a3.15 3.15 0 0 1-.685-1.002 3.06 3.06 0 0 1-.166-.622 3.014 3.014 0 0 1-.03-.893 2.986 2.986 0 0 1 .664-1.189l3.864-4.137 5.385-5.766a1.378 1.378 0 0 0-.986-2.355zm-2.823 8.372a1.38 1.38 0 0 0-1.378 1.378v4.966c0 .762.616 1.378 1.378 1.378h7.94a1.38 1.38 0 0 0 1.378-1.378 1.38 1.38 0 0 0-1.378-1.378h-6.562v-3.588a1.38 1.38 0 0 0-1.378-1.378z"/>
+                            </svg>
+                        </Link>
                     </div>
                     <ThemeToggle />
                 </div>
@@ -143,7 +154,16 @@ export function Sidebar() {
 
             {/* Mobile top bar */}
             <div className="md:hidden flex items-center justify-between px-4 py-3 border-b border-border bg-background sticky top-0 z-40">
-                <span className="font-semibold text-sm">Dhanush K</span>
+                <div className="flex items-center gap-2.5">
+                    <div className="w-7 h-7 rounded-full overflow-hidden border border-border shrink-0">
+                        <img
+                            src="/avatar.jpg"
+                            alt="Dhanush K"
+                            className="w-full h-full object-cover"
+                        />
+                    </div>
+                    <span className="font-semibold text-sm">Dhanush K</span>
+                </div>
                 <div className="flex items-center gap-1">
                     <ThemeToggle />
                     <button onClick={() => setOpen(!open)}

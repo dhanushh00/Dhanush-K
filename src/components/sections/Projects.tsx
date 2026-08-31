@@ -6,49 +6,65 @@ import { Github, ExternalLink } from "lucide-react";
 
 type Project = {
     title: string;
-    description: string;
+    tagline: string;
+    bullets: string[];
     tech: string[];
     github: string;
     live: string | null;
-    category: string;
+    categories: string[];
 };
 
 const projects: Project[] = [
     {
-        title: "ChainFund — Decentralised Community Lending Protocol",
-        description:
-            "Smart-contract chit fund where members deposit periodically and bid via sealed-bid auctions to receive the pool, with on-chain repayment tracking and an AI-powered credit scoring oracle.",
-        tech: ["Solidity", "Foundry", "React", "Node.js", "Ethers.js", "Gemini API"],
-        github: "https://github.com/dhanushkg23",
+        title: "Finora AI – Agentic Financial Intelligence Platform",
+        tagline: "Multi-agent AI system orchestrating 5 specialized intelligence agents for explainable financial insights and portfolio analysis.",
+        bullets: [
+            "Built a multi-agent AI system using LangGraph with 5 specialised agents for news, sentiment, technical analysis, risk, and financial reporting.",
+            "Integrated FinBERT for financial sentiment analysis and pandas-ta for RSI, SMA, EMA, and Bollinger Bands to generate market insights.",
+            "Developed an AI report agent that combines agent outputs to provide explainable investment insights with confidence scores and risk analysis.",
+            "Added real-time stock data, portfolio tracking, watchlists, and price alerts to help users monitor and analyse investments.",
+        ],
+        tech: ["LangGraph", "Python", "FinBERT", "pandas-ta", "FastAPI", "Next.js", "PostgreSQL", "Gemini API"],
+        github: "https://github.com/dhanushh00",
         live: null,
-        category: "Blockchain",
+        categories: ["AI", "Full Stack"],
     },
     {
-        title: "Sentinel – Agentic Financial Intelligence Platform",
-        description:
-            "Multi-agent AI system using LangGraph orchestrating 5 specialised agents for news, sentiment, technical analysis, and risk to deliver explainable investment insights.",
-        tech: ["Python", "FastAPI", "LangGraph", "Next.js", "TypeScript", "PostgreSQL"],
-        github: "https://github.com/dhanushkg23",
+        title: "Cipher DAO – Confidential Governance Protocol",
+        tagline: "Privacy-preserving decentralized governance protocol with TEE-based confidentiality and dual-token voting on Base Sepolia.",
+        bullets: [
+            "Built a privacy-focused DAO with 4 Solidity smart contracts for encrypted balances, private voting, and hidden proposal amounts using Inco TEE.",
+            "Developed a dual-token system (cUSDC and cGOV) with an ERC-4626 vault for confidential asset and voting management.",
+            "Implemented session keys to reduce repeated MetaMask prompts and deployed contracts on Base Sepolia.",
+            "Designed a confidential governance flow covering proposal creation, encrypted voting, proposal finalization, and secure execution.",
+        ],
+        tech: ["Solidity", "Inco TEE", "ERC-4626", "Base Sepolia", "Smart Contracts", "Web3.js", "Ethers.js"],
+        github: "https://github.com/dhanushh00",
         live: null,
-        category: "AI/ML",
+        categories: ["Blockchain", "Full Stack"],
     },
     {
-        title: "Neuro-Symbolic Tax Optimisation Engine",
-        description:
-            "Hybrid reasoning system combining symbolic tax rules with ML-driven heuristics to generate personalised tax optimisation recommendations in an interactive web app.",
-        tech: ["Python", "Streamlit", "Scikit-learn", "Pandas", "NumPy"],
-        github: "https://github.com/dhanushkg23",
+        title: "CrimeVision – Intelligent Cloud-Based Criminal Identification System",
+        tagline: "Serverless cloud architecture for real-time facial recognition, metadata indexing, and secure criminal identity verification.",
+        bullets: [
+            "Built real-time facial recognition using AWS Rekognition for identity detection and verification.",
+            "Deployed event-driven workflows with AWS Lambda triggered by image uploads to Amazon S3.",
+            "Managed facial metadata operations using Amazon DynamoDB for scalable cloud storage.",
+            "Designed a scalable and secure cloud-based identity recognition architecture.",
+        ],
+        tech: ["AWS Rekognition", "AWS Lambda", "Amazon S3", "Amazon DynamoDB", "Python", "REST APIs"],
+        github: "https://github.com/dhanushh00",
         live: null,
-        category: "AI/ML",
+        categories: ["Cloud", "Full Stack", "AI"],
     },
 ];
 
-const categories = ["All", "Blockchain", "AI/ML"];
+const categories = ["All", "AI", "Blockchain", "Full Stack", "Cloud"];
 
 export function Projects() {
     const [active, setActive] = useState("All");
     const filtered =
-        active === "All" ? projects : projects.filter((p) => p.category === active);
+        active === "All" ? projects : projects.filter((p) => p.categories.includes(active));
 
     return (
         <section id="projects" className="px-5 sm:px-8 md:px-16 lg:px-24 py-16 sm:py-20 max-w-5xl">
@@ -59,9 +75,14 @@ export function Projects() {
                 transition={{ duration: 0.5 }}
             >
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-12">
-                    <h2 className="text-sm font-semibold text-foreground uppercase tracking-widest">
-                        Projects
-                    </h2>
+                    <div>
+                        <h2 className="text-sm font-semibold text-foreground uppercase tracking-widest">
+                            Projects
+                        </h2>
+                        <p className="text-xs text-muted-foreground mt-1">
+                            Filtered by AI · Blockchain · Full Stack · Cloud
+                        </p>
+                    </div>
 
                     {/* Filter pills */}
                     <div className="flex gap-2 flex-wrap">
@@ -70,7 +91,7 @@ export function Projects() {
                                 key={cat}
                                 onClick={() => setActive(cat)}
                                 className={`px-3 py-1 text-xs rounded-full border transition-colors ${active === cat
-                                    ? "bg-foreground text-background border-foreground"
+                                    ? "bg-foreground text-background border-foreground font-medium"
                                     : "border-border text-muted-foreground hover:border-foreground hover:text-foreground"
                                     }`}
                             >
@@ -80,7 +101,7 @@ export function Projects() {
                     </div>
                 </div>
 
-                <div className="flex flex-col gap-0">
+                <div className="flex flex-col gap-6">
                     {filtered.map((project, i) => (
                         <motion.div
                             key={project.title}
@@ -88,17 +109,27 @@ export function Projects() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.35, delay: i * 0.07 }}
-                            className="group p-5 sm:p-6 -mx-5 sm:-mx-6 rounded-2xl hover:bg-accent/40 transition-colors"
+                            className="group p-6 sm:p-7 rounded-2xl border border-border bg-card/60 hover:bg-accent/30 hover:border-foreground/20 transition-all duration-200"
                         >
                             {/* Header row */}
                             <div className="flex items-start justify-between gap-4 mb-3">
                                 <div>
-                                    <span className="text-sm text-muted-foreground mr-4">
-                                        0{i + 1}
-                                    </span>
-                                    <span className="text-xl font-bold group-hover:text-muted-foreground transition-colors">
+                                    <div className="flex items-center gap-2 mb-1.5 flex-wrap">
+                                        <span className="text-xs font-mono text-muted-foreground">
+                                            0{i + 1}
+                                        </span>
+                                        {project.categories.map((c) => (
+                                            <span
+                                                key={c}
+                                                className="px-2 py-0.5 text-[11px] font-medium rounded-md bg-accent text-foreground/80 border border-border"
+                                            >
+                                                {c}
+                                            </span>
+                                        ))}
+                                    </div>
+                                    <h3 className="text-xl font-bold text-foreground group-hover:text-foreground/90 transition-colors">
                                         {project.title}
-                                    </span>
+                                    </h3>
                                 </div>
                                 <div className="flex items-center gap-3 shrink-0 pt-0.5">
                                     <a
@@ -124,11 +155,21 @@ export function Projects() {
                                 </div>
                             </div>
 
-                            <p className="text-sm text-muted-foreground leading-relaxed mb-4 ml-0 sm:ml-6">
-                                {project.description}
+                            <p className="text-sm text-foreground/80 leading-relaxed mb-4">
+                                {project.tagline}
                             </p>
 
-                            <div className="flex flex-wrap gap-2 ml-0 sm:ml-6">
+                            {/* Bullets */}
+                            <ul className="flex flex-col gap-2 mb-5">
+                                {project.bullets.map((bullet, idx) => (
+                                    <li key={idx} className="flex items-start gap-2.5 text-xs sm:text-sm text-muted-foreground leading-relaxed">
+                                        <span className="mt-2 w-1.5 h-1.5 rounded-full bg-foreground/40 shrink-0" />
+                                        <span>{bullet}</span>
+                                    </li>
+                                ))}
+                            </ul>
+
+                            <div className="flex flex-wrap gap-2 pt-2 border-t border-border/50">
                                 {project.tech.map((t) => (
                                     <span
                                         key={t}

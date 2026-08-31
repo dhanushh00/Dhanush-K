@@ -3,7 +3,6 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Sidebar } from "@/components/Sidebar";
-import { RightBackgroundGlow } from "@/components/RightBackgroundGlow";
 import { StarfieldBackground } from "@/components/StarfieldBackground";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -24,7 +23,6 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
           <div className="min-h-screen flex flex-col md:flex-row bg-background text-foreground relative overflow-hidden">
             <StarfieldBackground />
-            <RightBackgroundGlow />
             <Sidebar />
             <main className="flex-1 md:ml-60 w-full overflow-x-hidden relative z-10">
               <div className="max-w-6xl mx-auto w-full">

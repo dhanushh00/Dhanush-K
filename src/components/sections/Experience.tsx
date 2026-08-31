@@ -9,26 +9,26 @@ const work = [
         period: "2025 – Present",
         icon: "SC",
         bullets: [
-            "Managing and coordinating student affairs for 1000+ students across departments",
-            "Proposing and implementing improvements to campus discipline and student welfare policies",
-            "Facilitating communication between the student body and college administration",
+            "Connected students, parents, faculty, and administrators to address student concerns.",
+            "Contributed to university policy development related to student welfare, code of behaviour, and extracurricular activities.",
+            "Coordinated with the Students’ Welfare Office to organise cultural, technical, and sports-related campus activities.",
         ],
     },
     {
         role: "Active Member",
-        org: "Artificial Intelligence Club – VIT Chennai",
-        period: "2024 – Present",
+        org: "Artificial Intelligence Club, VIT Chennai",
+        period: "2024 – 2025",
         icon: "AI",
         bullets: [
-            "Contributed to collaborative AI-based projects and research discussions",
-            "Assisted in organising AI workshops, seminars, and technical events",
+            "Conducted AI workshops, technical sessions, and hackathons to promote practical learning.",
+            "Collaborated with club members on AI projects, technical discussions, and events.",
         ],
     },
 ];
 
 const education = [
     {
-        degree: "B.Tech – Computer Science and Engineering (Core)",
+        degree: "B.Tech in Computer Science and Engineering",
         institution: "Vellore Institute of Technology, Chennai",
         period: "Aug 2023 – Jul 2027",
         detail: "CGPA: 8.63",
@@ -39,17 +39,12 @@ const education = [
         period: "2021 – 2023",
         detail: "92.5%",
     },
-    {
-        degree: "Class X",
-        institution: "Devi Matriculation Higher Secondary School",
-        period: "2020 – 2021",
-        detail: "Pass",
-    },
 ];
 
 const certifications = [
-    "Introduction to Generative AI – IBM (2024)",
-    "Fundamentals of DevOps – IBM (2024)",
+    "Introduction to Generative AI – IBM",
+    "Foundation of Quantum Technologies – IBM",
+    "Solved 500+ problems on LeetCode, demonstrating strong problem-solving and Data Structures & Algorithms skills.",
 ];
 
 function Label({ children }: { children: React.ReactNode }) {
@@ -120,9 +115,9 @@ export function Experience() {
                     ))}
                 </div>
 
-                {/* Certifications */}
+                {/* Certifications & Achievements */}
                 <div>
-                    <Label>Certifications</Label>
+                    <Label>Certificates & Achievements</Label>
                     <ul className="flex flex-col gap-2.5">
                         {certifications.map((cert, i) => (
                             <li key={i} className="flex items-start gap-3 text-sm text-muted-foreground">

@@ -5,17 +5,27 @@ import { Github, ExternalLink } from "lucide-react";
 
 const featured = [
     {
-        title: "ChainFund — Decentralised Community Lending Protocol",
-        description: "Smart-contract chit fund with sealed-bid auctions, on-chain repayment tracking, and an AI-powered credit scoring oracle.",
-        tech: ["Solidity", "Foundry", "React", "Node.js", "Ethers.js"],
-        github: "https://github.com/dhanushkg23",
+        title: "Finora AI – Agentic Financial Intelligence Platform",
+        category: "AI",
+        description: "Multi-agent AI system orchestrating 5 specialised agents for news, sentiment, technical analysis, risk, and report generation using LangGraph and FinBERT.",
+        tech: ["LangGraph", "Python", "FinBERT", "pandas-ta", "FastAPI", "Next.js"],
+        github: "https://github.com/dhanushh00",
         live: null,
     },
     {
-        title: "Sentinel – Agentic Financial Intelligence Platform",
-        description: "Multi-agent AI system orchestrating specialised agents to deliver explainable investment insights using LangGraph and FinBERT.",
-        tech: ["Python", "FastAPI", "LangGraph", "Next.js", "PostgreSQL"],
-        github: "https://github.com/dhanushkg23",
+        title: "Cipher DAO – Confidential Governance Protocol",
+        category: "Blockchain",
+        description: "Privacy-focused DAO with 4 Solidity smart contracts for encrypted balances, private voting, and an ERC-4626 vault using Inco TEE deployed on Base Sepolia.",
+        tech: ["Solidity", "Inco TEE", "ERC-4626", "Base Sepolia", "Web3.js"],
+        github: "https://github.com/dhanushh00",
+        live: null,
+    },
+    {
+        title: "CrimeVision – Intelligent Cloud-Based Criminal Identification System",
+        category: "Cloud / Full Stack",
+        description: "Scalable serverless criminal identification architecture featuring real-time facial recognition via AWS Rekognition, Lambda triggers, S3, and DynamoDB.",
+        tech: ["AWS Rekognition", "AWS Lambda", "Amazon S3", "DynamoDB", "Python"],
+        github: "https://github.com/dhanushh00",
         live: null,
     },
 ];
@@ -36,7 +46,7 @@ export function FeaturedProjects() {
                     </a>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                     {featured.map((project, i) => (
                         <motion.div
                             key={project.title}

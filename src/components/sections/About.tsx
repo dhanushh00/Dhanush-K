@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { BookOpen } from "lucide-react";
 
-const currentlyLearning = ["LangChain", "PyTorch", "Advanced Generative AI"];
+const currentlyLearning = ["Quantum Computing", "Advanced Multi-Agent Systems", "Zero-Knowledge Proofs"];
 
 export function About() {
     return (
@@ -20,24 +20,18 @@ export function About() {
 
                 <div className="space-y-4 text-base leading-relaxed text-foreground/80">
                     <p>
-                        I am a final-year Computer Science student at{" "}
-                        <span className="text-foreground font-medium">VIT, Chennai</span>,
-                        focused on building blockchain systems, full-stack applications, and
-                        practical AI/ML projects. I enjoy shipping end-to-end products — from
-                        smart contracts and backend services to polished UIs.
+                        I am a Computer Science student at{" "}
+                        <span className="text-foreground font-medium">Vellore Institute of Technology, Chennai</span> (CGPA: 8.63),
+                        specialising in Agentic AI systems, confidential blockchain protocols, full-stack engineering, and cloud infrastructure.
                     </p>
                     <p>
-                        Recently, I’ve worked on decentralised lending protocols, multimodal
-                        deepfake detection, and neuro-symbolic optimisation tools — combining
-                        reasoning with data-driven models.
+                        My work spans building autonomous multi-agent intelligence platforms with <span className="text-foreground font-medium">LangGraph & FinBERT</span>,
+                        confidential governance smart contracts on <span className="text-foreground font-medium">Ethereum & Base Sepolia</span> using Inco TEE,
+                        and event-driven serverless facial recognition systems using the <span className="text-foreground font-medium">AWS Cloud</span> ecosystem.
                     </p>
                     <p>
-                        I am currently exploring{" "}
-                        <span className="text-foreground font-medium">
-                            Generative AI, system design,
-                        </span>{" "}
-                        and scalable application development — with a focus on shipping
-                        things that actually work.
+                        Beyond engineering, I serve as a <span className="text-foreground font-medium">Student Council Member</span> at VIT Chennai managing student affairs
+                        and university policy, and I have solved <span className="text-foreground font-medium">500+ problems on LeetCode</span> across Data Structures & Algorithms.
                     </p>
                 </div>
 
